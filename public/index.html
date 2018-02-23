@@ -9,9 +9,18 @@
 </head>
 
 <body>
-  <p>This is a test.</p>
+  <h1>Super Duper Basic Chat v0.1-beta</h1>
+
+  <form id="message-form">
+    <input type="text" name="message" placeholder="message text" />
+    <button>Send</button>
+  </form>
+
+  <ol id="messages"></ol>
+
 </body>
 <script src="/socket.io/socket.io.js"></script>
+<script src="/js/libs/jquery-3.3.1.min.js"></script>
 <script src="/js/index.js"></script>
 
 </html>
