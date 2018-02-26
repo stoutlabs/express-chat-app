@@ -6,20 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moisture_Bot, Browser Version v1.1</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
-  <h1>Super Duper Basic Chat v0.1-beta</h1>
+<body class="chat">
 
-  <form id="message-form">
-    <input type="text" name="message" placeholder="message text" />
-    <button>Send</button>
-  </form>
+  <div class="chat__sidebar">
+    <h3>People</h3>
+    <div id="users"></div>
+  </div>
 
-  <ol id="messages"></ol>
+  <div class="chat__main">
+    <ol id="messages" class="chat__messages"></ol>
+    <div class="chat__footer">
+      <form id="message-form">
+        <input type="text" name="message" placeholder="message text" autofocus autocomplete="off" />
+        <button>Send</button>
+      </form>
+
+      <button id="send-location">Send Location</button>
+    </div>
+
+  </div>
+
+
 
 </body>
 <script src="/socket.io/socket.io.js"></script>
+<script src="/js/libs/moment.js"></script>
 <script src="/js/libs/jquery-3.3.1.min.js"></script>
 <script src="/js/index.js"></script>
 
